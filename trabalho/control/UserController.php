@@ -15,7 +15,7 @@ class UserController
 				 $params["phone"],
 				 $params["password"]);
 
-		$db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
+		$db = new DatabaseConnector("localhost", "test", "mysql", "", "root", "");
 
 		$conn = $db->getConnection();
 		
@@ -25,7 +25,8 @@ class UserController
 
 	private function generateInsertQuery($user)
 	{
-		$query =  "INSERT INTO user (first_name, last_name, email, birthdate, phone, pass) VALUES ('".$user->getName()."','".
+
+		$query =  "INSERT INTO user (first_name, last_name, email, birthdate, phone, password) VALUES ('".$user->getFirstName()."','".
 					$user->getLastName()."','".
 					$user->getEmail()."','".
 					$user->getBirthdate()."','".
@@ -40,11 +41,11 @@ class UserController
 		$params = $request->get_params();
 		$crit = $this->generateCriteria($params);
 
-		$db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
+		$db = new DatabaseConnector("localhost", "test", "mysql", "", "root", "");
 
 		$conn = $db->getConnection();
 
-		$result = $conn->query("SELECT first_name, last_name, email, birthdate, phone FROM user WHERE ".$crit);
+		$result = $conn->query("SELECT id, first_name, last_name, email, birthdate, phone FROM user WHERE ".$crit);
 
 		//foreach($result as $row) 
 

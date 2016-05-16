@@ -15,7 +15,7 @@ class PackageController
             $params["dimensions"],
             $params["destination_address"]);
 
-        $db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
+        $db = new DatabaseConnector("localhost", "test", "mysql", "", "root", "");
 
         $conn = $db->getConnection();
 
@@ -26,7 +26,6 @@ class PackageController
     private function generateInsertQuery($package)
     {
         $query =  "INSERT INTO package (id, weight, dimensions, destination_address) VALUES ('".$package->getId()."','".
-            $package->getId()."','".
             $package->getWeight()."','".
             $package->getDimensions()."','".
             $package->getDestinationAddress()."')";
@@ -40,7 +39,7 @@ class PackageController
         $params = $request->get_params();
         $crit = $this->generateCriteria($params);
 
-        $db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
+        $db = new DatabaseConnector("localhost", "test", "mysql", "", "root", "");
 
         $conn = $db->getConnection();
 

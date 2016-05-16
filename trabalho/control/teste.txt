@@ -1,0 +1,3 @@
+http://localhost/trabalho/user/?name=cebola&last_name=roxa&birthdate=1980-12-25&email=cebolaroxa@tomate.vegetais&phone=9987654321&password=CebolaRox@
+
+http://localhost/trabalho/user/?first_name=cebola&last_name=roxa&birthdate=1980-12-25&email=cebolaroxa@tomate.vegetais&phone=9987654321&password=CebolaRox@

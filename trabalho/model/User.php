@@ -8,7 +8,7 @@ class User
 	private $birthdate;
 	private $phone;
 	private $password;
-
+// atualizar rest request
 	public function __construct($first_name, $last_name, $email, $birthdate, $phone, $password)
 	{
 		$this->setFirstName($first_name);
@@ -32,7 +32,7 @@ class User
 	 */
 	public function setFirstName($first_name)
 	{
-		$this->name = $first_name;
+		$this->first_name = $first_name;
 	}
 
 	/**
