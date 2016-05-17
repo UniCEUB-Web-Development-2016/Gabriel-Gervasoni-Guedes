@@ -5,16 +5,20 @@ class User
 	private $first_name;
 	private $last_name;
 	private $email;
-	private $birthdate;
+	private $rg;
+	private $cpf;
+	private $address;
 	private $phone;
 	private $password;
-// atualizar rest request
-	public function __construct($first_name, $last_name, $email, $birthdate, $phone, $password)
+
+	public function __construct($first_name, $last_name, $email, $rg, $cpf, $address, $phone, $password)
 	{
 		$this->setFirstName($first_name);
 		$this->setLastName($last_name);
 		$this->setEmail($email);
-		$this->setBirthdate($birthdate);
+		$this->setRg($rg);
+		$this->setCpf($cpf);
+		$this->setAddress($address);
 		$this->setPhone($phone);
 		$this->setPassword($password);
 	}
@@ -28,7 +32,7 @@ class User
 	}
 
 	/**
-	 * @param mixed $name
+	 * @param mixed $first_name
 	 */
 	public function setFirstName($first_name)
 	{
@@ -70,17 +74,49 @@ class User
 	/**
 	 * @return mixed
 	 */
-	public function getBirthdate()
+	public function getRg()
 	{
-		return $this->birthdate;
+		return $this->rg;
 	}
 
 	/**
-	 * @param mixed $birthdate
+	 * @param mixed $rg
 	 */
-	public function setBirthdate($birthdate)
+	public function setRg($rg)
 	{
-		$this->birthdate = $birthdate;
+		$this->rg = $rg;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getCpf()
+	{
+		return $this->cpf;
+	}
+
+	/**
+	 * @param mixed $cpf
+	 */
+	public function setCpf($cpf)
+	{
+		$this->cpf = $cpf;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getAddress()
+	{
+		return $this->address;
+	}
+
+	/**
+	 * @param mixed $address
+	 */
+	public function setAddress($address)
+	{
+		$this->address = $address;
 	}
 
 	/**
@@ -114,7 +150,6 @@ class User
 	{
 		$this->password = $password;
 	}
-
 
 
 }

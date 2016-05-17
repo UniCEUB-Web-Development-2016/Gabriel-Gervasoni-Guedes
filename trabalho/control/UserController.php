@@ -3,7 +3,9 @@ include_once "model/Request.php";
 include_once "model/User.php";
 include_once "database/DatabaseConnector.php";
 
+
 class UserController
+
 {
 	public function register($request)
 	{
@@ -11,11 +13,13 @@ class UserController
 		$user = new User($params["first_name"],
 				 $params["last_name"],
 				 $params["email"],
-				 $params["birthdate"],
+				 $params["rg"],
+				 $params["cpf"],
+				 $params["address"],
 				 $params["phone"],
 				 $params["password"]);
 
-		$db = new DatabaseConnector("localhost", "test", "mysql", "", "root", "");
+		$db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
 
 		$conn = $db->getConnection();
 		
@@ -26,10 +30,12 @@ class UserController
 	private function generateInsertQuery($user)
 	{
 
-		$query =  "INSERT INTO user (first_name, last_name, email, birthdate, phone, password) VALUES ('".$user->getFirstName()."','".
+		$query =  "INSERT INTO user (first_name, last_name, email, rg, cpf, address, phone, password) VALUES ('".$user->getFirstName()."','".
 					$user->getLastName()."','".
 					$user->getEmail()."','".
-					$user->getBirthdate()."','".
+					$user->getRg()."','".
+					$user->getCpf()."','".
+					$user->getAddress()."','".
 					$user->getPhone()."','". 
 					$user->getPassword()."')";
 
@@ -41,11 +47,11 @@ class UserController
 		$params = $request->get_params();
 		$crit = $this->generateCriteria($params);
 
-		$db = new DatabaseConnector("localhost", "test", "mysql", "", "root", "");
+		$db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
 
 		$conn = $db->getConnection();
 
-		$result = $conn->query("SELECT id, first_name, last_name, email, birthdate, phone FROM user WHERE ".$crit);
+		$result = $conn->query("SELECT id, first_name, last_name, email, rg, cpf, address, phone FROM user WHERE ".$crit);
 
 		//foreach($result as $row) 
 
@@ -63,4 +69,5 @@ class UserController
 
 		return substr($criteria, 0, -4);	
 	}
+
 }

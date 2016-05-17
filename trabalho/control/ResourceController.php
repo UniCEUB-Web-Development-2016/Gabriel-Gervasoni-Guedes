@@ -12,7 +12,7 @@ class ResourceController
 	[
 		"package" => "PackageController",
 		"user" => "UserController",
-		"delivery" => "DeliveryController",
+		"delivery" => "DeliveryController"
 	];
 
 	public function createResource($request)
@@ -23,5 +23,15 @@ class ResourceController
 	public function searchResource($request)
 	{
 		return (new $this->controlMap[$request->get_resource()]())->search($request);
+	}
+
+	public function updateResource($request)
+	{
+		return (new $this->controlMap[$request->get_resource()]())->update($request);
+	}
+
+	public function deleteResource($request)
+	{
+		return (new $this->controlMap[$request->get_resource()]())->delete($request);
 	}
 }

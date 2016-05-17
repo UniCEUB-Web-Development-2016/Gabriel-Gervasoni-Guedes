@@ -10,10 +10,9 @@ class DeliveryController
     {
         $params = $request->get_params();
         $delivery = new Delivery(
-            $params["id"],
             $params["status"]);
 
-        $db = new DatabaseConnector("localhost", "test", "mysql", "", "root", "");
+        $db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
 
         $conn = $db->getConnection();
 
@@ -23,8 +22,7 @@ class DeliveryController
 
     private function generateInsertQuery($delivery)
     {
-        $query =  "INSERT INTO delivery (id, status) VALUES ('".$delivery->getId()."','".
-            $delivery->getStatus()."','";
+        $query =  "INSERT INTO delivery (status) VALUES ('".$delivery->getStatus()."')";
 
 
         return $query;
@@ -35,7 +33,7 @@ class DeliveryController
         $params = $request->get_params();
         $crit = $this->generateCriteria($params);
 
-        $db = new DatabaseConnector("localhost", "test", "mysql", "", "root", "");
+        $db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
 
         $conn = $db->getConnection();
 

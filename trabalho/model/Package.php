@@ -2,34 +2,17 @@
 
 class Package
 {
-    private $id;
     private $weight;
     private $dimensions;
     private $destination_address;
 
-    public function __construct($id, $weight, $dimensions, $destination_address)
+    public function __construct($weight, $dimensions, $destination_address)
     {
-        $this->setId($id);
         $this->setWeight($weight);
         $this->setDimensions($dimensions);
         $this->setDestinationAddress($destination_address);
     }
 
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
 
     /**
      * @return mixed
