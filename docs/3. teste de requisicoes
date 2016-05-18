@@ -135,5 +135,7 @@ feito por Maxsuel Ferreira
     </body>
     </html>
 
-DELETE http://localhost/trabalho/delivery/<id>
-resultado: 
+  DELETE http://localhost/trabalho/delivery/<id>
+  resultado: <br />
+  <b>Notice</b>: Undefined offset: 1 in <b>C:\xampp\htdocs\trabalho\control\RequestController.php</b> on line <b>33</b><br />
+  null
