@@ -1,0 +1,139 @@
+feito por Maxsuel Ferreira
+
+1. USER
+  GET1 http://localhost/trabalho/user/
+  resultado:
+    <br />
+    <b>Notice</b>: Undefined offset: 1 in <b>C:\xampp\htdocs\trabalho\control\RequestController.php</b> on line <b>33</b><br />
+    <br />
+    <b>Fatal error</b>: Uncaught Error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\trabalho\control\UserController.php:58
+    Stack trace:
+    #0 C:\xampp\htdocs\trabalho\control\ResourceController.php(25): UserController-&gt;search(Object(Request))
+    #1 C:\xampp\htdocs\trabalho\control\ControlManager.php(34): ResourceController-&gt;searchResource(Object(Request))
+    #2 C:\xampp\htdocs\trabalho\control\ControlManager.php(26): ControlManager-&gt;route_method(Object(Request))
+    #3 C:\xampp\htdocs\trabalho\util\RequestRouter.php(10): ControlManager-&gt;getResource()
+    #4 C:\xampp\htdocs\trabalho\index.php(6): RequestRouter-&gt;route()
+    #5 {main}
+    thrown in <b>C:\xampp\htdocs\trabalho\control\UserController.php</b> on line <b>58</b><br />
+
+  GET2 http://localhost/trabalho/user/?<parameters>
+  resultado: ok
+
+  POST http://localhost/trabalho/user/?<parameters>
+  resultado: ok
+
+  PUT http://localhost/trabalho/user/<id>?<parameters>
+  resultado: null
+
+  DELETE http://localhost/trabalho/user/<id>/
+  resultado: <b>Notice</b>: Undefined offset: 1 in <b>C:\xampp\htdocs\trabalho\control\RequestController.php</b> on line <b>33</b><br />
+  null
+
+2. Package
+  GET1 http://localhost/trabalho/package/
+  resultado: <br />
+    <b>Notice</b>: Undefined offset: 1 in <b>C:\xampp\htdocs\trabalho\control\RequestController.php</b> on line <b>33</b><br />
+    <br />
+    <b>Fatal error</b>: Uncaught Error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\trabalho\control\PackageController.php:48
+    Stack trace:
+    #0 C:\xampp\htdocs\trabalho\control\ResourceController.php(25): PackageController-&gt;search(Object(Request))
+    #1 C:\xampp\htdocs\trabalho\control\ControlManager.php(34): ResourceController-&gt;searchResource(Object(Request))
+    #2 C:\xampp\htdocs\trabalho\control\ControlManager.php(26): ControlManager-&gt;route_method(Object(Request))
+    #3 C:\xampp\htdocs\trabalho\util\RequestRouter.php(10): ControlManager-&gt;getResource()
+    #4 C:\xampp\htdocs\trabalho\index.php(6): RequestRouter-&gt;route()
+    #5 {main}
+    thrown in <b>C:\xampp\htdocs\trabalho\control\PackageController.php</b> on line <b>48</b><br />
+
+  GET2 http://localhost/trabalho/user/package/?id=1
+  resultado: <br />
+    <b>Notice</b>: Undefined offset: 1 in <b>C:\xampp\htdocs\trabalho\control\RequestController.php</b> on line <b>33</b><br />
+    <br />
+    <b>Fatal error</b>: Uncaught Error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\trabalho\control\UserController.php:58
+    Stack trace:
+    #0 C:\xampp\htdocs\trabalho\control\ResourceController.php(25): UserController-&gt;search(Object(Request))
+    #1 C:\xampp\htdocs\trabalho\control\ControlManager.php(34): ResourceController-&gt;searchResource(Object(Request))
+    #2 C:\xampp\htdocs\trabalho\control\ControlManager.php(26): ControlManager-&gt;route_method(Object(Request))
+    #3 C:\xampp\htdocs\trabalho\util\RequestRouter.php(10): ControlManager-&gt;getResource()
+    #4 C:\xampp\htdocs\trabalho\index.php(6): RequestRouter-&gt;route()
+    #5 {main}
+    thrown in <b>C:\xampp\htdocs\trabalho\control\UserController.php</b> on line <b>58</b><br />
+
+  POST http://localhost/package/?<parameters>
+  resultado: ok
+
+  PUT http://localhost/trabalho/package/<id>?<parameters>
+  resultado:
+    null
+
+  DELETE http://localhost/trabalho/package/<id>/
+  resultado:
+    <br />
+    <b>Notice</b>: Undefined offset: 1 in <b>C:\xampp\htdocs\trabalho\control\RequestController.php</b> on line <b>33</b><br />
+    null
+    
+3. DELIVERY
+
+  GET http://localhost/trabalho/delivery/
+  resultado:
+    <br />
+    <b>Notice</b>: Undefined offset: 1 in <b>C:\xampp\htdocs\trabalho\control\RequestController.php</b> on line <b>33</b><br />
+    <br />
+    <b>Fatal error</b>: Uncaught Error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\trabalho\control\DeliveryController.php:44
+    Stack trace:
+    #0 C:\xampp\htdocs\trabalho\control\ResourceController.php(25): DeliveryController-&gt;search(Object(Request))
+    #1 C:\xampp\htdocs\trabalho\control\ControlManager.php(34): ResourceController-&gt;searchResource(Object(Request))
+    #2 C:\xampp\htdocs\trabalho\control\ControlManager.php(26): ControlManager-&gt;route_method(Object(Request))
+    #3 C:\xampp\htdocs\trabalho\util\RequestRouter.php(10): ControlManager-&gt;getResource()
+    #4 C:\xampp\htdocs\trabalho\index.php(6): RequestRouter-&gt;route()
+    #5 {main}
+    thrown in <b>C:\xampp\htdocs\trabalho\control\DeliveryController.php</b> on line <b>44</b><br />
+  
+  GET2  http://localhost/trabalho/delivery/?<parameters>
+  resultado: ok
+  
+  POST  http://localhost/trabalho/delivery/?<parametrs>
+  resultado: ok
+  
+  PUT http://localhost/user/delivery/<id>/?<paramters>
+  resultado:
+     <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
+    <head>
+    <title>M&eacute;todo n&atilde;o permitido!</title>
+    <link rev="made" href="mailto:postmaster@localhost" />
+    <style type="text/css"><!--/*--><![CDATA[/*><!--*/ 
+    body { color: #000000; background-color: #FFFFFF; }
+    a:link { color: #0000CC; }
+    p, address {margin-left: 3em;}
+    span {font-size: smaller;}
+    /*]]>*/--></style>
+    </head>
+
+    <body>
+    <h1>M&eacute;todo n&atilde;o permitido!</h1>
+    <p>
+
+
+    O m&eacute;todo PUT
+    n&atilde;o &eacute; permitido para a URL requisitada.
+
+    </p>
+    <p>
+    Se voc&ecirc; acredita ter encontrado um problema no servidor,
+    por favor entre em contato com o 
+    <a href="mailto:postmaster@localhost">webmaster</a>.
+
+    </p>
+
+    <h2>Error 405</h2>
+    <address>
+    <a href="/">localhost</a><br />
+    <span>Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.4</span>
+    </address>
+    </body>
+    </html>
+
+DELETE http://localhost/trabalho/delivery/<id>
+resultado: 
