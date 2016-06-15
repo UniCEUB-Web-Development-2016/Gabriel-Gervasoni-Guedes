@@ -3,7 +3,7 @@
 include_once "model/Request.php";
 include_once "control/UserController.php";
 include_once "control/PackageController.php";
-include_once "control/DeliveryController.php";
+
 
 class ResourceController
 {
@@ -12,7 +12,6 @@ class ResourceController
 	[
 		"package" => "PackageController",
 		"user" => "UserController",
-		"delivery" => "DeliveryController"
 	];
 
 	public function createResource($request)

@@ -6,12 +6,29 @@ http://localhost/trabalho/user/?first_name=cebola&last_name=roxa&birthdate=1980-
 http://localhost/trabalho/package/?weight=10&dimensions=1x1x1&destination_address=testeaasdasdasdasdasd
 
 
-
+USER
 POST
 http://localhost/trabalho/user/?first_name=cebola&last_name=roxa&email=abc@d.com&rg=0111222&cpf=99988877766&address=rua teste 2 numero 123&phone=81818181&password=123cebola4
 
 GET
 http://localhost/trabalho/user/?first_name=cebola
 
+UPDATE
+http://localhost/trabalho/user/cpf=11122233344&first_name=teste
+
 DELETE
 http://localhost/trabalho/user/cpf=99988877766
+-----------------------
+
+PACKAGE
+POST
+http://localhost/trabalho/package/?weight=10&dimensions=10x10&destination_address=endereco&cod_user=1
+
+GET
+http://localhost/trabalho/package/?cod_user=1
+
+UPDATE
+http://localhost/trabalho/package/id=2&status=1
+
+DELETE
+http://localhost/trabalho/package/id=3

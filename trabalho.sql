@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 17-Maio-2016 às 05:44
+-- Generation Time: 15-Jun-2016 às 03:19
 -- Versão do servidor: 10.1.10-MariaDB
--- PHP Version: 5.6.19
+-- PHP Version: 7.0.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,41 +23,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `delivery`
---
-
-CREATE TABLE `delivery` (
-  `id` int(11) NOT NULL,
-  `status` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `delivery`
---
-
-INSERT INTO `delivery` (`id`, `status`) VALUES
-(1, 'entregue'),
-(2, 'entregue');
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `package`
 --
 
 CREATE TABLE `package` (
   `id` int(11) NOT NULL,
   `weight` int(11) NOT NULL,
-  `dimensions` varchar(30) NOT NULL,
-  `destination_address` varchar(200) NOT NULL
+  `dimensions` varchar(45) NOT NULL,
+  `destination_address` varchar(45) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `cod_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `package`
 --
 
-INSERT INTO `package` (`id`, `weight`, `dimensions`, `destination_address`) VALUES
-(1, 10, '1x1x1', 'testeaasdasdasdasdasd');
+INSERT INTO `package` (`id`, `weight`, `dimensions`, `destination_address`, `status`, `cod_user`) VALUES
+(2, 10, '10x10', 'endereco', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -67,14 +50,14 @@ INSERT INTO `package` (`id`, `weight`, `dimensions`, `destination_address`) VALU
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `rg` varchar(15) NOT NULL,
-  `cpf` varchar(20) NOT NULL,
-  `address` varchar(200) NOT NULL,
-  `phone` varchar(15) NOT NULL,
-  `password` text NOT NULL
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `rg` int(11) NOT NULL,
+  `cpf` varchar(45) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -82,24 +65,23 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `rg`, `cpf`, `address`, `phone`, `password`) VALUES
-(1, 'Gabriel', 'Guedes', '123@4.com', '1222333', '11122233344', 'SQN 200 bl a', '123456789', '698dc19d489c4e4db73e28a713eab07b'),
-(7, 'asd', 'asd', 'das', 'asd', '99988877766', 'asd', 'asd', 'asd');
+(1, 'cebola', 'roxa', 'abc@d.com', 111222, '99988877766', 'rua%20teste%202%20numero%20123', 81818181, '123cebola4'),
+(2, 'cebola', 'roxa', 'abc@d.com', 111222, '99988877766', 'rua%20teste%202%20numero%20123', 81818181, '123cebola4'),
+(3, 'cebola', 'roxa', 'abc@d.com', 111222, '99988877766', 'rua%20teste%202%20numero%20123', 81818181, '123cebola4'),
+(4, 'teste', 'porra', '123@4.com', 123456, '11122233344', 'fsdfsdfsdfsdf', 6545984, 'pass'),
+(5, '123123', '12123', '312@c.c', 4524, '4224', '4242', 42424, '24242'),
+(6, '123123', '12123', '312@c.c', 4524, '4224', '4242', 42424, 'gh');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `delivery`
---
-ALTER TABLE `delivery`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `package`
 --
 ALTER TABLE `package`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_package_user` (`cod_user`);
 
 --
 -- Indexes for table `user`
@@ -112,20 +94,25 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `delivery`
---
-ALTER TABLE `delivery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
 -- AUTO_INCREMENT for table `package`
 --
 ALTER TABLE `package`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Limitadores para a tabela `package`
+--
+ALTER TABLE `package`
+  ADD CONSTRAINT `fk_package_user` FOREIGN KEY (`cod_user`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

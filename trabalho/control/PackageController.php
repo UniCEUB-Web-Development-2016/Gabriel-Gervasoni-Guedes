@@ -12,7 +12,9 @@ class PackageController
         $package = new Package(
             $params["weight"],
             $params["dimensions"],
-            $params["destination_address"]);
+            $params["destination_address"],
+			$params["status"],
+			$params["cod_user"]);
 
         $db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
 
@@ -24,10 +26,11 @@ class PackageController
 
     private function generateInsertQuery($package)
     {
-        $query =  "INSERT INTO package (weight, dimensions, destination_address) VALUES ('".$package->getWeight()."','".
+        $query =  "INSERT INTO package (weight, dimensions, destination_address, status, cod_user) VALUES ('".$package->getWeight()."','".
             $package->getDimensions()."','".
-            $package->getDestinationAddress()."')";
-
+            $package->getDestinationAddress()."','".
+			$package->getStatus()."','".
+			$package->getCodUser()."')";
 
         return $query;
     }
@@ -41,7 +44,7 @@ class PackageController
 
         $conn = $db->getConnection();
 
-        $result = $conn->query("SELECT id, status, dimensions,destination_address FROM package WHERE ".$crit);
+        $result = $conn->query("SELECT id, status, dimensions, destination_address, status, cod_user FROM package WHERE ".$crit);
 
         //foreach($result as $row)
 
@@ -59,4 +62,33 @@ class PackageController
 
         return substr($criteria, 0, -4);
     }
+	
+	public function update($request)
+	{
+		$params = $request->get_params();
+		$db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
+		$conn = $db->getConnection();
+		foreach ($params as $key => $value) {
+			$result = $conn->query("UPDATE package SET " . $key . " =  '" . $value . "' WHERE id = '" . $params["id"] . "'");
+		}
+		return $result;
+	}
+
+	public function delete($request)
+	{
+		$params = $request->get_params();
+		$db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
+		$conn = $db->getConnection();
+		$result = $conn->query("DELETE FROM package WHERE id = '" . $params["id"] . "'");
+		return $result;
+	}
+
+	private function isValid($parameters)
+	{
+		$keys = array_keys($parameters);
+		$diff1 = array_diff($keys, $this->requiredParameters);
+		$diff2 = array_diff($this->requiredParameters, $keys);
+		if (empty($diff2) && empty($diff1))
+			return false;
+}
 }

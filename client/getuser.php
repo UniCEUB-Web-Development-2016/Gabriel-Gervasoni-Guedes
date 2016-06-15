@@ -32,10 +32,12 @@ header('location:home.html');
 
 
 // And you're ready to go!
-$response = \Httpful\Request::get('http://localhost/trabalho/user/?email='.$_GET['email'].'&password='.$_GET['pass'])->send();
+$response = \Httpful\Request::get('http://localhost/trabalho/user/?email='.$_POST['email'].'&password='.$_POST['pass'])->send();
 
+if($response->code == 200)
 $request_response = json_decode($response->body);
 var_dump($request_response);
+$request_response['first_name']
 die;
 foreach($request_response as $value)
 {
