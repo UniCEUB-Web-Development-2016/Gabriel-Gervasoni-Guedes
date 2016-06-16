@@ -13,7 +13,16 @@ $url = "http://localhost/trabalho/user/?first_name=".$_POST['first_name']
     ."&password=".$_POST['pass'];
 
 $response = \Httpful\Request::post($url)->send();
-header('location:home.html');
+
+if($response->body == 'false'){
+    include('signup2.html');
+}
+else{
+    header('location:home.html');
+}
+
+
+
 
 //----------------------------------------------------------------------
 

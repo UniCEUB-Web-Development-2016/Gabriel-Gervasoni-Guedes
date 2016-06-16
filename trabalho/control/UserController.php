@@ -53,7 +53,7 @@ class UserController
 
 		$conn = $db->getConnection();
 
-		$result = $conn->query("SELECT id, first_name, last_name, email, rg, cpf, address, phone FROM user WHERE " . $crit);
+		$result = $conn->query("SELECT id, first_name, last_name, email, rg, cpf, address, phone, password FROM user WHERE " . $crit);
 
 		//foreach($result as $row) 
 

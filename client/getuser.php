@@ -34,12 +34,29 @@ header('location:home.html');
 // And you're ready to go!
 $response = \Httpful\Request::get('http://localhost/trabalho/user/?email='.$_POST['email'].'&password='.$_POST['pass'])->send();
 
-if($response->code == 200)
+if($response->code == 200){
 $request_response = json_decode($response->body);
-var_dump($request_response);
-$request_response['first_name']
-die;
-foreach($request_response as $value)
+	if($x= ($request_response[0]->email == $_POST['email'] && $request_response[0]->password == $_POST['pass'])){
+		session_start();
+		$_SESSION['email']=$request_response[0]->email;
+		var_dump($_SESSION);
+
+	}
+	else{
+		header('location:signin2.html');
+	}
+}
+else{
+	header('location:error.html');
+}
+
+
+
+
+
+//$request_response['first_name'];
+
+/*foreach($request_response as $value)
 {
 	echo $value->first_name . '<br>';
 	echo '<div class="checkbox">
@@ -49,4 +66,4 @@ foreach($request_response as $value)
         </div>';
 }
 
-
+*/
