@@ -18,7 +18,7 @@ if($response->body == 'false'){
     include('signup2.html');
 }
 else{
-    header('location:home.html');
+    header('location:index.html');
 }
 
 

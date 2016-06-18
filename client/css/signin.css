@@ -64,9 +64,16 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%;
+  margin-top: 5%;
 }
-
+.jumbotron2{
+  opacity: 0.9;
+  width: 25%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
 
 
 

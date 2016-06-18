@@ -50,34 +50,22 @@
     </div>
   </div>
 </nav>
-
+<div class="jumbotron2">
 <div class="container">
 
-  <form class="form-signin" action="insertuser.php" method="post">
-    <h2 class="form-signin-heading">Please sign up</h2>
+  <form class="form-signin" action="getuser.php" method="post">
+    <h2 class="form-signin-heading">Please sign in</h2>
 
 
-    <input type="text" name="first_name" id="inputFirstName" class="form-control" placeholder="First Name" required autofocus>
+    <input type="text" name="email" placeholder="Email" class="form-control" required autofocus>
 
-    <input type="text" name="last_name"id="inputLastName" class="form-control" placeholder="Last Name" required autofocus>
+    <input type="password" name="pass" placeholder="Password" class="form-control" required>
 
-    <input type="email" name="email"id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-
-    <input type="text" name="rg" id="inputRg" class="form-control" placeholder="RG" required autofocus>
-
-    <input type="text" name="cpf" id="inputCpf" class="form-control" placeholder="CPF" required autofocus>
-
-    <input type="text" name="address" id="inputAddress" class="form-control" placeholder="Address" required autofocus>
-
-    <input type="phone" name="phone" id="inputPhone" class="form-control" placeholder="Phone" required autofocus>
-
-    <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Password" required>
-
-    <button class="button-signup" type="submit">Sign up</button>
+    <button type="submit" class="button-signup">Sign in</button>
 
 
   </form>
-
+</div>
 
 
 </div> <!-- /container -->

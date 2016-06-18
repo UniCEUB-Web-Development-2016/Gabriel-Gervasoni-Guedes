@@ -77,7 +77,7 @@ class UserController
 		$db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
 		$conn = $db->getConnection();
 		foreach ($params as $key => $value) {
-			$result = $conn->query("UPDATE user SET " . $key . " =  '" . $value . "' WHERE cpf = '" . $params["cpf"] . "'");
+			$result = $conn->query("UPDATE user SET " . $key . " =  '" . $value . "' WHERE email = '" . $params["email"] . "'");
 		}
 		return $result;
 	}
