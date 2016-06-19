@@ -32,11 +32,11 @@ header('location:home.html');
 
 
 // And you're ready to go!
-$response = \Httpful\Request::get('http://localhost/trabalho/user/?email='.$_POST['email'].'&password='.$_POST['pass'])->send();
+$response = \Httpful\Request::get('http://localhost/trabalho/user/?email='.$_POST['email'])->send();
 
 if($response->code == 200){
 $request_response = json_decode($response->body);
-	if($x= ($request_response[0]->email == $_POST['email'] && $request_response[0]->password == $_POST['pass'])){
+	if($request_response[0]->email == $_POST['email'] && $request_response[0]->password == $_POST['pass']){
 		session_start();
 		$_SESSION['id']=$request_response[0]->id;
 		$_SESSION['email']=$request_response[0]->email;

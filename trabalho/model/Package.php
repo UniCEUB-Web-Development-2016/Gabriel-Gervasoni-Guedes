@@ -5,17 +5,17 @@ class Package
     private $weight;
     private $dimensions;
     private $destination_address;
-	private $status;
-	private $cod_user;
+    private $status;
+    private $cod_user;
 
     public function __construct($weight, $dimensions, $destination_address, $status, $cod_user)
     {
         $this->setWeight($weight);
         $this->setDimensions($dimensions);
         $this->setDestinationAddress($destination_address);
-		$this->setStatus($status);
-		$this->setCodUser($cod_user);
-		
+        $this->setStatus($status);
+        $this->setCodUser($cod_user);
+
     }
 
 
@@ -67,7 +67,7 @@ class Package
         $this->destination_address = $destination_address;
     }
 
-	/**
+    /**
      * @return mixed
      */
     public function getStatus()
@@ -82,7 +82,8 @@ class Package
     {
         $this->status = $status;
     }
-	/**
+
+    /**
      * @return mixed
      */
     public function getCodUser()
@@ -97,4 +98,11 @@ class Package
     {
         $this->cod_user = $cod_user;
     }
+
+
+
 }
+
+	/**
+     * @return mixed
+     */

@@ -6,6 +6,8 @@ include_once "database/DatabaseConnector.php";
 
 class PackageController
 {
+    private $requiredParameters = array('weight', 'dimensions', 'destination_address', 'status', 'cod_user');
+
     public function register($request)
     {
         $params = $request->get_params();
@@ -44,7 +46,7 @@ class PackageController
 
         $conn = $db->getConnection();
 
-        $result = $conn->query("SELECT id, status, dimensions, destination_address, status, cod_user FROM package WHERE ".$crit);
+        $result = $conn->query("SELECT id, weight, status, dimensions, destination_address, status, cod_user FROM package WHERE ".$crit);
 
         //foreach($result as $row)
 

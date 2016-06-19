@@ -14,15 +14,16 @@ GET
 http://localhost/trabalho/user/?first_name=cebola
 
 UPDATE
-http://localhost/trabalho/user/cpf=11122233344&first_name=teste
+http://localhost/trabalho/user/email=123@4.com&first_name=teste
 
 DELETE
-http://localhost/trabalho/user/cpf=99988877766
+http://localhost/trabalho/user/id=4
 -----------------------
 
 PACKAGE
 POST
 http://localhost/trabalho/package/?weight=10&dimensions=10x10&destination_address=endereco&cod_user=1
+http://localhost/trabalho/package/?weight=12&dimensions=32x32x32x&destination_address=SQSW 303, Brasília - DF, Brasil&status=0&cod_user=4
 
 GET
 http://localhost/trabalho/package/?cod_user=1

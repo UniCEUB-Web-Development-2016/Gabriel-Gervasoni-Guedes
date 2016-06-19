@@ -87,7 +87,7 @@ class UserController
 		$params = $request->get_params();
 		$db = new DatabaseConnector("localhost", "trabalho", "mysql", "", "root", "");
 		$conn = $db->getConnection();
-		$result = $conn->query("DELETE FROM user WHERE cpf = '" . $params["cpf"] . "'");
+		$result = $conn->query("DELETE FROM user WHERE id = '" . $params["id"] . "'");
 		return $result;
 	}
 

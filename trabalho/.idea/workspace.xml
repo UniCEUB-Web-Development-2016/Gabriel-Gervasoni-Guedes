@@ -26,37 +26,37 @@
         <entry file="file://$PROJECT_DIR$/control/teste.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="63" />
+              <caret line="25" column="137" selection-start-line="25" selection-start-column="137" selection-end-line="25" selection-end-column="137" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PackageController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PackageController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/control/PackageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="10.461538">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3529412">
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
               <folding>
-                <marker date="1466001083627" expanded="true" signature="704:983" placeholder="INSERT INTO package... " />
-                <marker date="1466001083627" expanded="true" signature="1312:1400" placeholder="SELECT id, s... package" />
-                <marker date="1466001083627" expanded="true" signature="2017:2103" placeholder="UPDATE packa... " />
-                <marker date="1466001083627" expanded="true" signature="2345:2399" placeholder="DELETE FROM " />
+                <marker date="1466296280351" expanded="true" signature="815:1094" placeholder="INSERT INTO package... " />
+                <marker date="1466296280351" expanded="true" signature="1423:1519" placeholder="SELECT id, s... package" />
+                <marker date="1466296280351" expanded="true" signature="2136:2222" placeholder="UPDATE packa... " />
+                <marker date="1466296280351" expanded="true" signature="2464:2518" placeholder="DELETE FROM " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/control/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4509804">
-              <caret line="79" column="118" selection-start-line="79" selection-start-column="118" selection-end-line="79" selection-end-column="118" />
+            <state vertical-scroll-proportion="-7.1923075">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding>
-                <marker date="1466220433208" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
-                <marker date="1466220433208" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
-                <marker date="1466220433208" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
-                <marker date="1466220433208" expanded="true" signature="2385:2438" placeholder="DELETE FROM " />
+                <marker date="1466257388961" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
+                <marker date="1466257388961" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
+                <marker date="1466257388961" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
+                <marker date="1466257388961" expanded="true" signature="2385:2436" placeholder="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -75,8 +75,8 @@
       <file leaf-file-name="Package.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Package.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state vertical-scroll-proportion="-16.346153">
+              <caret line="88" column="30" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -89,14 +89,14 @@
       <list>
         <option value="$PROJECT_DIR$/control/RequestController.php" />
         <option value="$PROJECT_DIR$/model/User.php" />
-        <option value="$PROJECT_DIR$/control/PackageController.php" />
         <option value="$PROJECT_DIR$/model/Delivery.php" />
-        <option value="$PROJECT_DIR$/model/Package.php" />
         <option value="$PROJECT_DIR$/control/DeliveryController.php" />
         <option value="$PROJECT_DIR$/control/ControlManager.php" />
-        <option value="$PROJECT_DIR$/control/teste.txt" />
         <option value="$PROJECT_DIR$/control/ResourceController.php" />
         <option value="$PROJECT_DIR$/control/UserController.php" />
+        <option value="$PROJECT_DIR$/control/teste.txt" />
+        <option value="$PROJECT_DIR$/model/Package.php" />
+        <option value="$PROJECT_DIR$/control/PackageController.php" />
       </list>
     </option>
   </component>
@@ -140,8 +140,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -218,6 +216,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,7 +284,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -341,10 +341,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <marker date="1466001083627" expanded="true" signature="704:983" placeholder="INSERT INTO package... " />
-            <marker date="1466001083627" expanded="true" signature="1312:1400" placeholder="SELECT id, s... package" />
-            <marker date="1466001083627" expanded="true" signature="2017:2103" placeholder="UPDATE packa... " />
-            <marker date="1466001083627" expanded="true" signature="2345:2399" placeholder="DELETE FROM " />
+            <marker date="1466296280351" expanded="true" signature="815:1094" placeholder="INSERT INTO package... " />
+            <marker date="1466296280351" expanded="true" signature="1423:1519" placeholder="SELECT id, s... package" />
+            <marker date="1466296280351" expanded="true" signature="2136:2222" placeholder="UPDATE packa... " />
+            <marker date="1466296280351" expanded="true" signature="2464:2518" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -354,10 +354,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="106" selection-start-line="55" selection-start-column="106" selection-end-line="55" selection-end-column="106" />
           <folding>
-            <marker date="1466220433208" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
-            <marker date="1466220433208" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
-            <marker date="1466220433208" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
-            <marker date="1466220433208" expanded="true" signature="2385:2438" placeholder="DELETE FROM " />
+            <marker date="1466257388961" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
+            <marker date="1466257388961" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
+            <marker date="1466257388961" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
+            <marker date="1466257388961" expanded="true" signature="2385:2436" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -419,10 +419,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1466220433208" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
-            <marker date="1466220433208" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
-            <marker date="1466220433208" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
-            <marker date="1466220433208" expanded="true" signature="2385:2438" placeholder="DELETE FROM " />
+            <marker date="1466257388961" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
+            <marker date="1466257388961" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
+            <marker date="1466257388961" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
+            <marker date="1466257388961" expanded="true" signature="2385:2436" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -475,10 +475,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
           <folding>
-            <marker date="1466220433208" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
-            <marker date="1466220433208" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
-            <marker date="1466220433208" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
-            <marker date="1466220433208" expanded="true" signature="2385:2438" placeholder="DELETE FROM " />
+            <marker date="1466257388961" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
+            <marker date="1466257388961" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
+            <marker date="1466257388961" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
+            <marker date="1466257388961" expanded="true" signature="2385:2436" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -538,10 +538,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1466220433208" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
-            <marker date="1466220433208" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
-            <marker date="1466220433208" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
-            <marker date="1466220433208" expanded="true" signature="2385:2438" placeholder="DELETE FROM " />
+            <marker date="1466257388961" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
+            <marker date="1466257388961" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
+            <marker date="1466257388961" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
+            <marker date="1466257388961" expanded="true" signature="2385:2436" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -608,10 +608,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1466220433208" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
-            <marker date="1466220433208" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
-            <marker date="1466220433208" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
-            <marker date="1466220433208" expanded="true" signature="2385:2438" placeholder="DELETE FROM " />
+            <marker date="1466257388961" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
+            <marker date="1466257388961" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
+            <marker date="1466257388961" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
+            <marker date="1466257388961" expanded="true" signature="2385:2436" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -666,14 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Package.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/control/ControlManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7254902">
@@ -709,6 +701,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/control/teste.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="137" selection-start-line="25" selection-start-column="137" selection-end-line="25" selection-end-column="137" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5384617">
@@ -717,36 +717,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control/teste.txt">
+    <entry file="file://$PROJECT_DIR$/control/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="63" />
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <marker date="1466257388961" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
+            <marker date="1466257388961" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
+            <marker date="1466257388961" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
+            <marker date="1466257388961" expanded="true" signature="2385:2436" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Package.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="88" column="30" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/control/PackageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.461538">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3529412">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
           <folding>
-            <marker date="1466001083627" expanded="true" signature="704:983" placeholder="INSERT INTO package... " />
-            <marker date="1466001083627" expanded="true" signature="1312:1400" placeholder="SELECT id, s... package" />
-            <marker date="1466001083627" expanded="true" signature="2017:2103" placeholder="UPDATE packa... " />
-            <marker date="1466001083627" expanded="true" signature="2345:2399" placeholder="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4509804">
-          <caret line="79" column="118" selection-start-line="79" selection-start-column="118" selection-end-line="79" selection-end-column="118" />
-          <folding>
-            <marker date="1466220433208" expanded="true" signature="773:1116" placeholder="INSERT INTO user... " />
-            <marker date="1466220433208" expanded="true" signature="1400:1491" placeholder="SELECT id, f... user" />
-            <marker date="1466220433208" expanded="true" signature="2054:2143" placeholder="UPDATE user " />
-            <marker date="1466220433208" expanded="true" signature="2385:2438" placeholder="DELETE FROM " />
+            <marker date="1466296280351" expanded="true" signature="815:1094" placeholder="INSERT INTO package... " />
+            <marker date="1466296280351" expanded="true" signature="1423:1519" placeholder="SELECT id, s... package" />
+            <marker date="1466296280351" expanded="true" signature="2136:2222" placeholder="UPDATE packa... " />
+            <marker date="1466296280351" expanded="true" signature="2464:2518" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>

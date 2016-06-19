@@ -74,7 +74,14 @@ body {
   margin-right: auto;
   margin-top: 5%;
 }
-
+.jumbotron3{
+  opacity: 1;
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+}
 
 
 .user-row {
@@ -109,4 +116,11 @@ body {
 }
 .toppad
 {margin-top:20px;
+}
+.delete{
+  text-align: right;
+}
+.packages{
+  position: absolute;
+  text-align: left;
 }
