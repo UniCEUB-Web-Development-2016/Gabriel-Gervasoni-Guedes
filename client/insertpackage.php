@@ -7,7 +7,8 @@ $url = "http://localhost/trabalho/package/?weight=".$_POST['weight']
     ."&destination_address=".$_POST['destination_address']
     ."&status=0"
     ."&cod_user=".$_POST['cod_user'];
-
+var_dump($url);
+die;
 $response = \Httpful\Request::post($url)->send();
 
     header('location:package.php');
