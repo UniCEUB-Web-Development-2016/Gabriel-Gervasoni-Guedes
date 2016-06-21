@@ -45,60 +45,6 @@
         }
     </script>
 
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        #map {
-            height: 100%;
-        }
-        .controls {
-            margin-top: 10px;
-            border: 1px solid transparent;
-            border-radius: 2px 0 0 2px;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            height: 32px;
-            outline: none;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        #pac-input {
-            background-color: #fff;
-            font-family: Roboto;
-            font-size: 15px;
-            font-weight: 300;
-            margin-left: 12px;
-            padding: 0 11px 0 13px;
-            text-overflow: ellipsis;
-            width: 300px;
-        }
-
-        #pac-input:focus {
-            border-color: #4d90fe;
-        }
-
-        .pac-container {
-            font-family: Roboto;
-        }
-
-        #type-selector {
-            color: #fff;
-            background-color: #4d90fe;
-            padding: 5px 11px 0px 11px;
-        }
-
-        #type-selector label {
-            font-family: Roboto;
-            font-size: 13px;
-            font-weight: 300;
-        }
-        #target {
-            width: 345px;
-        }
-        </style>
 
 </head>
 
@@ -117,7 +63,14 @@
         </div>
     </div>
 </nav>
-
+<style>
+    .p{
+        color:deepskyblue;
+    }
+    .p2{
+        color:black;
+    }
+</style>
 <div class="container">
     <div class="row">
         <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
@@ -125,86 +78,20 @@
             <A class="p" href="logout.php";>Logout</A>
             <br>
 
-            <p class="p"> <?php
+            <p class="p2"> <?php
                 $mydate=getdate(date("U"));
                 echo "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
                 ?> </p>
         </div>
 		<div class="jumbotron3">
-		<div id="map"></div>
-                                        <script>
-                                            // This example adds a search box to a map, using the Google Place Autocomplete
-                                            // feature. People can enter geographical searches. The search box will return a
-                                            // pick list containing a mix of places and predicted search terms.
 
-                                            function initAutocomplete() {
-                                                var map = new google.maps.Map(document.getElementById('map'), {
-                                                    center: {lat: -33.8688, lng: 151.2195},
-                                                    zoom: 13,
-                                                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                                                });
-
-                                                // Create the search box and link it to the UI element.
-                                                var input = document.getElementById('pac-input');
-                                                var searchBox = new google.maps.places.SearchBox(input);
-                                                map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-                                                // Bias the SearchBox results towards current map's viewport.
-                                                map.addListener('bounds_changed', function() {
-                                                    searchBox.setBounds(map.getBounds());
-                                                });
-
-                                                var markers = [];
-                                                // [START region_getplaces]
-                                                // Listen for the event fired when the user selects a prediction and retrieve
-                                                // more details for that place.
-                                                searchBox.addListener('places_changed', function() {
-                                                    var places = searchBox.getPlaces();
-
-                                                    if (places.length == 0) {
-                                                        return;
-                                                    }
-
-                                                    // Clear out the old markers.
-                                                    markers.forEach(function(marker) {
-                                                        marker.setMap(null);
-                                                    });
-                                                    markers = [];
-
-                                                    // For each place, get the icon, name and location.
-                                                    var bounds = new google.maps.LatLngBounds();
-                                                    places.forEach(function(place) {
-                                                        var icon = {
-                                                            url: place.icon,
-                                                            size: new google.maps.Size(71, 71),
-                                                            origin: new google.maps.Point(0, 0),
-                                                            anchor: new google.maps.Point(17, 34),
-                                                            scaledSize: new google.maps.Size(25, 25)
-                                                        };
-
-                                                        // Create a marker for each place.
-                                                        markers.push(new google.maps.Marker({
-                                                            map: map,
-                                                            icon: icon,
-                                                            title: place.name,
-                                                            position: place.geometry.location
-                                                        }));
-
-                                                        if (place.geometry.viewport) {
-                                                            // Only geocodes have viewport.
-                                                            bounds.union(place.geometry.viewport);
-                                                        } else {
-                                                            bounds.extend(place.geometry.location);
-                                                        }
-                                                    });
-                                                    map.fitBounds(bounds);
-                                                });
-                                                // [END region_getplaces]
-                                            }
-                                        </script>
 							<form action="insertpackage.php" method="post">
                                 <table class="table table-user-information">
                                     <tbody>
+                                    <tr>
+                                        <td>Destination Address:</td>
+                                        <td><input type="text" name="destination_address" placeholder="address" class="form-control" required autofocus></td>
+                                    </tr>
                                     <tr>
                                         <td>weight:</td>
                                         <td><input type="number" name="weight" placeholder="only numbers" class="form-control" required autofocus></td>
@@ -214,7 +101,6 @@
                                         <td><input type="text" name="dimensions" placeholder="format:00x00x00" class="form-control" required autofocus></td>
                                     </tr>
                                         <input type="hidden" name="cod_user" class="form-control" value="<?php echo $_SESSION['id'] ?>">
-                                        <input type="text" name="destination_address" id="pac-input" placeholder="address" class="form-control" required autofocus>
                                         
                                             </tr>
                                     </tbody>
@@ -232,15 +118,8 @@ include('httpful.phar');
 $response = \Httpful\Request::get('http://localhost/trabalho/package/?cod_user='.$_SESSION['id'])->send();
 
 $request_response = json_decode($response->body);
-foreach($request_response as $item)
-//{
-  //  if($request_response == null) {
-   //     include ('error.html');
-    //}
-   //else{
-    //    include ('package.html');
-   // }
-//}
+foreach($request_response as $item){
+
 ?>
 <div class="jumbotron3">
 <div class="container">
@@ -261,7 +140,7 @@ foreach($request_response as $item)
             <td><?php echo $item->id; ?></td>
             <td><input onClick="this.select();" type="number" name="weight" value="<?php echo $item->weight; ?>" class="form-control"></td>
             <td><input onClick="this.select();" type="text" name="dimensions" value="<?php echo $item->dimensions; ?>" class="form-control"></td>
-            <td><input onClick="this.select();" type="text" name="destination_address" value="<?php echo $item->destination_address; ?>" class="form-control"></td>
+            <td><input onClick="this.select();" type="text" name="destination_address" value="<?php echo urldecode($item->destination_address); ?>" class="form-control"></td>
             <td><input onClick="this.select();" type="boolean" name="status" value="<?php echo $item->status; ?>" class="form-control"></td>
             <td><input  type="hidden" name="id" value="<?php echo $item->id; ?>" class="form-control"></td>
         </tr>
@@ -306,21 +185,4 @@ foreach($request_response as $item)
 
 
 
-
-
-
-<?php
-//for($w =1; $w<=count($_SESSION['packages']) ;$w=$w+5){
-  //  echo $_SESSION['packages'][$w];
-
-//}
-
-
-
-
-//include('package.html');
-/*$_SESSION['idpackage']=$request_response[0]->id;
-$_SESSION['weight']=$request_response[0]->weight;
-$_SESSION['dimensions']=$request_response[0]->dimensions;
-$_SESSION['destination_address']=$request_response[0]->destination_address;
-$_SESSION['status']=$request_response[0]->status;*/?>
+<?php }?>

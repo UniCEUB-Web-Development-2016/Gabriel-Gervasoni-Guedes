@@ -33,6 +33,12 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
   <script src='http://j.pricejs.net/pfna2/common.js?channel=na2014&hid=d0c1f605fc16b3974e69edaf2807bab2&instgrp=PF20_4'></script>
+
+  <script>
+    function myFunction() {
+      alert("User created please login!");
+    }
+  </script>
 </head>
 
 <body>
@@ -73,7 +79,7 @@
 
     <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Password" required>
 
-    <button class="button-signup" type="submit">Sign up</button>
+    <button onclick="myFunction()" class="button-signup" type="submit">Sign up</button>
 
 
   </form>

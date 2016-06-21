@@ -88,7 +88,7 @@
                                         <td><input type="text" name="dimensions" placeholder="format:00x00x00" class="form-control" required autofocus></td>
                                     </tr>
                                         <input type="hidden" name="cod_user" class="form-control" value="<?php echo $_SESSION['id'] ?>">
-                                        <input type="text" name="destination_address" id="pac-input" placeholder="address" class="form-control" required autofocus>
+                                        <input type="text"  class="controls" name="destination_address" id="pac-input" placeholder="address" class="form-control" >
                                         <script>
                                             // This example adds a search box to a map, using the Google Place Autocomplete
                                             // feature. People can enter geographical searches. The search box will return a
@@ -105,6 +105,7 @@
                                                 var input = document.getElementById('pac-input');
                                                 var searchBox = new google.maps.places.SearchBox(input);
                                                 map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
 
                                                 // Bias the SearchBox results towards current map's viewport.
                                                 map.addListener('bounds_changed', function() {
@@ -162,11 +163,11 @@
                                             </tr>
                                     </tbody>
                                 </table>
-                                <button type="submit"  class="btn btn-primary">Create Package!</button>
+                                <button type="submit"  value="Enviar" class="btn btn-primary">Create Package!</button>
                             </form>
-                                        
-										
-										
+
+
+
 										<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDApX3ptWTCzVz7Axp96PkoClOlXPfwY04&libraries=places&callback=initAutocomplete"
         async defer></script>
 
