@@ -76,6 +76,8 @@
         <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
 
             <A class="p" href="logout.php";>Logout</A>
+            <A> / </A>
+            <A class="p" href="getuser2.php";>User Page </A>
             <br>
 
             <p class="p2"> <?php

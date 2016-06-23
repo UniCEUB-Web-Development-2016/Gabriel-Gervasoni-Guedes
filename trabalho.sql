@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 15-Jun-2016 às 03:19
+-- Generation Time: 23-Jun-2016 às 03:30
 -- Versão do servidor: 10.1.10-MariaDB
--- PHP Version: 7.0.4
+-- PHP Version: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -40,7 +40,12 @@ CREATE TABLE `package` (
 --
 
 INSERT INTO `package` (`id`, `weight`, `dimensions`, `destination_address`, `status`, `cod_user`) VALUES
-(2, 10, '10x10', 'endereco', 1, 1);
+(2, 10, '10x10', 'endereco', 1, 1),
+(4, 123, '50x50', 'endereco', 1, 4),
+(14, 10, '10x10', 'endereco', 0, 4),
+(15, 12, '32x32x32x', 'SQSW%20303,%20Bras%C3%ADlia%20-%20DF,%20Brasi', 0, 4),
+(20, 12, 'teste', 'tes', 0, 4),
+(22, 10, '10x10x10', 'SQSW+303+bloco+C+apto+407', 1, 47);
 
 -- --------------------------------------------------------
 
@@ -56,7 +61,7 @@ CREATE TABLE `user` (
   `rg` int(11) NOT NULL,
   `cpf` varchar(45) NOT NULL,
   `address` varchar(100) NOT NULL,
-  `phone` int(11) NOT NULL,
+  `phone` bigint(11) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -66,11 +71,12 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `rg`, `cpf`, `address`, `phone`, `password`) VALUES
 (1, 'cebola', 'roxa', 'abc@d.com', 111222, '99988877766', 'rua%20teste%202%20numero%20123', 81818181, '123cebola4'),
-(2, 'cebola', 'roxa', 'abc@d.com', 111222, '99988877766', 'rua%20teste%202%20numero%20123', 81818181, '123cebola4'),
-(3, 'cebola', 'roxa', 'abc@d.com', 111222, '99988877766', 'rua%20teste%202%20numero%20123', 81818181, '123cebola4'),
-(4, 'teste', 'porra', '123@4.com', 123456, '11122233344', 'fsdfsdfsdfsdf', 6545984, 'pass'),
-(5, '123123', '12123', '312@c.c', 4524, '4224', '4242', 42424, '24242'),
-(6, '123123', '12123', '312@c.c', 4524, '4224', '4242', 42424, 'gh');
+(4, 'teste', 'porra', '123@4.com', 0, '1000000000', '15', 66666, 'pass'),
+(6, '123123', '12123', '312@c.c', 4524, '4224', '4242', 42424, 'gh'),
+(42, 'Edi', 'Gervasoni', 'qwe@r.com', 321312, '6548791362', 'teste', 881155111, 'pass'),
+(43, 'marco', 'mane', 'mane@1.com', 1231231, '2131451341', 'teste', 2147483647, 'pass'),
+(46, 'tes+te', '123', 'ewqeqwe@c1.a', 213321, '3211', '312', 213, 'pass'),
+(47, 'Gabriel', 'Guedes', 'guedes_gabriel@hotmail.com', 125, '045541', 'SQSW+303+bloco+C+apto+407', 6181482030, 'pass');
 
 --
 -- Indexes for dumped tables
@@ -87,7 +93,9 @@ ALTER TABLE `package`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `cpf` (`cpf`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -97,12 +105,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `package`
 --
 ALTER TABLE `package`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- Constraints for dumped tables
 --

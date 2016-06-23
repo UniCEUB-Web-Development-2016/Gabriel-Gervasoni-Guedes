@@ -13,7 +13,7 @@ $request_response = json_decode($response->body);
 		$_SESSION['last_name']=urldecode($request_response[0]->last_name);
 		$_SESSION['rg']=$request_response[0]->rg;
 		$_SESSION['cpf']=$request_response[0]->cpf;
-		$_SESSION['address']=urlencode($request_response[0]->address);
+		$_SESSION['address']=urldecode($request_response[0]->address);
 		$_SESSION['phone']=$request_response[0]->phone;
 		include 'teste.html';
 
